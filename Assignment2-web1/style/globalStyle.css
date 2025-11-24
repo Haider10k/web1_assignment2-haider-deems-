@@ -1,0 +1,254 @@
+/* Styling for everything within the body */
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+/* Styling for the logo */
+.logo {
+    padding: 20px 20px;
+}
+
+/* Styling for the everything within the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    position: relative;
+}
+
+/* Styling to hide the nav toggle checkbox itself*/
+.nav-toggle {
+    display: none;
+}
+
+/* Styling for the hamburger menu icon (for small screens) */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Styling for the anchor within the nav semantic tag */
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Styling for the anchor within the nav semantic tag when we hover above it */
+nav a:hover {
+    color: rgb(39, 190, 102);
+}
+
+/* Styling for the unordered list within the nav semantic tag, makes menu nav menu hidden, and makes it smoothly transition when hamburger is toggled */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden; 
+    transition: max-height 0.3s ease-out;
+}
+
+/* Styling for the each list item within the nav semantic tag, adds a border to seperate each menu option*/
+nav li {
+    padding: 15px 20px;
+    border-top: 1px solid rgb(40,40,40);
+    text-align: center;
+}
+
+/* Styling to show the menu when hamburger checkbox is checked*/
+.nav-toggle:checked + .hamburger +nav ul {
+    max-height: 300px;
+}
+
+/* Styling for everything within a section to adjust to small screens */
+section {
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 2em;
+}
+
+/* Styling for specifically the h1 within the section id "intro" */
+section h1{
+    color: white;
+    font-size: 2.2em;
+    margin-top: 1.2em;
+    margin-bottom: 0.7em;
+}
+
+/* Styling for the paragraphs within a section */
+section p{
+    color: rgb(230, 230, 230);
+    font-size: 1.1em;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Styling for the first letter of paragraphs within a section */
+section p::first-letter{
+    font-size: 1.2em;
+}
+
+/* Styling for anything within the footer */
+footer {
+    color: rgb(230, 230, 230);
+    font-size: 1.0em;
+    font-style: italic;
+    margin: 1.5em 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+}
+
+/* Styling for any attribute tags within the id "back" for back-to-top link */
+#back a{
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Styling for the element with the id "back" and when we hover above it */
+#back a:hover {
+    color: rgb(39, 190, 102);
+}
+
+/* Styling to give spacing between the header and the page contents for small screens */
+main {
+    margin-top: 1em;
+}
+
+/* Styling using media to make 2x2 grid for medium-sized screens */
+@media (min-width: 590px) and (max-width: 789px) {
+
+    /* Style to hide hamburger icon to go back to original header and nav */
+    .hamburger {
+        display: none;
+    }
+
+    header {
+        padding: 0 30px;
+    }
+
+    nav ul {
+        position: static;
+        display: flex;
+        max-height: none;
+        background-color: transparent;
+    }
+    
+    nav li {
+        border-top: none;
+        padding: 30px;
+    }
+
+    /* Style to turn the content in the middle of the page into a 2x2 grid */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 30px;
+    }
+
+    /* Styling to make section1 in home to stretch across the full width */
+    #section1 {
+        grid-column: 1/-1;
+    }
+
+        section {
+        text-align: left;
+        padding: 20px;
+        margin-bottom: 0;
+        background-color: rgb(20, 20, 20);
+        border-radius: 8px;
+    }
+
+    section h1 {
+        font-size: 2.4em;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1em;
+    }
+}
+
+/* Styling to adjust page to large-sized screens */
+@media (min-width: 790px) {
+
+    /* Styling to the sides black */
+    body {
+        background-color: black;
+    }
+
+    /* Styling to center the main content at fixed width of 790px */
+    main {
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 0 0 2em 0;
+        display: block;
+    }
+
+    /* Styling to make the header span the full width */
+    header {
+        max-width: 790px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Styling to hide the hamburger menu and show the nav */
+    .hamburger {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        display: flex;
+        max-height: none;
+        background-color: transparent;
+    }
+
+    nav li {
+        padding: 30px;
+        border-top: none;
+    }
+
+    /* Styling for within a section for a large-sized screen */
+    section {
+        text-align: center;
+        padding: 0 80px;
+        margin-bottom: 2.5em;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    section h1 {
+        font-size: 3.0em;
+    }
+
+    section p {
+        font-size: 1.2em;
+    }
+
+    /* Styling to make the footer centered under 790px width */
+    footer {
+        max-width: 790px;
+        margin: 2em auto;
+        font-size: 1.2em;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

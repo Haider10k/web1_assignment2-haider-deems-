@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "keywords" content = "Watches, Seiko Mod, Custom">
+        <meta name = "description" content = "Contact page for 'rstimepieces' a custom watch website.">
+        <title>Contact | rstimepieces</title>
+        
+        <link rel="stylesheet" href="../style/normalizeStyle.css" type="text/css">
+        <link rel = "stylesheet" href = "../style/globalStyle.css" type = "text/css">
+        <link rel = "stylesheet" href = "../style/contactStyle.css" type = "text/css">
+    </head>
+
+    <body>
+        <header>
+            <img class = "logo" src = "../images/logo.png" alt = "rstimepieces logo" width = "125" height = "80">
+
+            <!-- hamburger menu component-->
+            <input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
+            <label for = "nav-toggle" class = "hamburger" aria-label = "Toggle navigation menu">
+
+            <nav>
+                <ul>
+                    <li class = "nav"><a href = "home.html">Home</a></li>
+                    <li class = "nav"><a href = "gallery.html">Gallery</a></li>
+                    <li class = "nav"><a href = "contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h1>Contact Us</h1>
+                <p>
+                    Have a question or want to start designing your own custom Seiko mod?
+                    Complete the form below and share your ideas with us whether it's a 
+                    specific model, preferred components, or inspiration for your next 
+                    timepiece. Our team will review your request and respond within 
+                    24-48 hours to discuss your build in more detail.
+                </p>
+                <p>
+                    Prefer a more direct approach? Contact us anytime via email or on 
+                    Instagram we'll respond within 24-48 hours.
+                </p>
+                <p>
+                    <!-- Image from https://www.pinterest.com/pin/mail-black-icon-191121577928943763/ -->
+                    <img src = "../images/email.png" alt = "Email logo" width = "70" height = "70">
+                    <a class = "link" href = "mailto:rstimepieces1@gmail.com" target = "_blank">
+                    rstimepieces1@gmail.com
+                    </a>
+                </p>
+                <p>
+                    <!-- Image from https://www.vectorstock.com/royalty-free-vector/
+                    instagram-logo-white-circle-outline-icon-ig-app-vector-56237085 -->
+                    <img src = "../images/instagram.png" alt = "instagram logo" width = "60" height = "60"> 
+                    <a class = "link" href = "https://www.instagram.com/rstimepieces_/" target = "_blank">
+                    rstimepieces_
+                    </a>
+                </p>
+            </section>
+
+            <section>
+                <h1>Contact Form</h1>
+                <form id = "contactForm" method = "get" action = "">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <dl>
+                            <dt>
+                                <label>Salutation:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "mr" name = "salutation">
+                                <label for = "mr">Mr.</label>
+
+                                <input type = "radio" id = "ms" name = "salutation">
+                                <label for = "ms">Ms.</label>
+
+                                <input type = "radio" id = "other" name = "salutation">
+                                <label for = "other">Other</label>
+                            </dd>
+
+                            <dt>
+                                <label for = "firstName">First Name:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "firstName" name = "first-name" pattern = "^[aA-zZ]+" placeholder = "ex. Haider" autofocus required>
+                            </dd>
+
+                            <dt>
+                                <label for = "lastName">Last Name:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "lastName" name = "last-name" pattern = "^[aA-zZ]+" placeholder = "ex. Mehmood" required>
+                            </dd>
+
+                            <dt>
+                                <label for = "phone">Phone Number:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "phone" name = "phone-number" pattern = "^[0-9]{3}-[0-9]{3}-[0-9]{4}$" placeholder = "ex. 123-456-7890" required>
+                            </dd>
+
+                            <dt>
+                                <label for = "email">Email Address:</label>
+                            </dt>
+                            <dd>
+                                <input type = "email" id = "email" name = "email-address" pattern = "^\w+@gmail.com$" placeholder = "ex. name@gmail.com" required>
+                            </dd>
+
+                            <dt>
+                                <label for = "country">Country:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "country" name = "country" pattern = "^[aA-zZ]+" placeholder = "ex. Canada" required>
+                            </dd>
+                        </dl>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Build Details</legend>
+                        <dl>
+                            <dt>
+                                <label for = "model">Model:</label>
+                            </dt>
+                            <dd>
+                                <select id = "model" name = "model">
+                                    <option value = "datejust">Datejust</option>
+                                    <option value = "daydate">Daydate</option>
+                                    <option value = "daytona">Daytona</option>
+                                    <option value = "gmt">GMT</option>
+                                </select>
+                            </dd>
+
+                            <dt>
+                                <label>Case & Bracelet Colour:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "silver" name = "bracelet-colour">
+                                <label for = "silver">Silver</label>
+
+                                <input type = "radio" id = "gold" name = "bracelet-colour">
+                                <label for = "gold">Gold</label>
+
+                                <input type = "radio" id = "rosegold" name = "bracelet-colour">
+                                <label for = "rosegold">Rose-Gold</label>
+
+                                <input type = "radio" id = "twoToneGold" name = "bracelet-colour">
+                                <label for = "twoToneGold">Two-Tone Gold</label>
+
+                                <input type = "radio" id = "twoToneRoseGold" name = "bracelet-colour">
+                                <label for = "twoToneRoseGold">Two-Tone Rose-Gold</label>
+                            </dd>
+                            
+                            <dt>
+                                <label>Bracelet:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "jubilee" name = "bracelet">
+                                <label for = "jubilee">Jubilee</label>
+
+                                <input type = "radio" id = "presidential" name = "bracelet">
+                                <label for = "presidential">Presidential</label>
+
+                                <input type = "radio" id = "oyster" name = "bracelet">
+                                <label for = "oyster">Oyster</label>
+
+                                <input type = "radio" id = "oysterflex" name = "bracelet">
+                                <label for = "oysterflex">Oysterflex</label>
+                            </dd>
+
+                            <dt>
+                                <label>Bezel:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "flutted" name = "bezel">
+                                <label for = "flutted">Flutted</label>
+
+                                <input type = "radio" id = "flat" name = "bezel">
+                                <label for = "flat">Flat</label>
+                            </dd>
+
+                            <dt>
+                                <label>Dial Numerals:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "arabic" name = "dial-numerals">
+                                <label for = "arabic">Arabic</label>
+
+                                <input type = "radio" id = "gem" name = "dial-numerals">
+                                <label for = "gem">Gem-Set</label>
+
+                                <input type = "radio" id = "roman" name = "dial-numerals">
+                                <label for = "roman">Roman</label>
+
+                                <input type = "radio" id = "single" name = "dial-numerals">
+                                <label for = "single">Single-Hour Markers</label>
+                            </dd>
+
+                            <dt>
+                                <label for = "dialColour">Dial Colour:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "dialColour" name = "dial-colour" pattern = "^[aA-zZ]+" placeholder = "ex. Blue">
+                            </dd>
+
+                            <dt>
+                                <label>Case Size:</label>
+                            </dt>
+                            <dd>
+                                <input type = "radio" id = "36mm" name = "case-size">
+                                <label for = "36mm">36mm</label>
+
+                                <input type = "radio" id = "39mm" name = "case-size">
+                                <label for = "39mm">39mm</label>
+
+                                <input type = radio id = "41mm" name = "case-size">
+                                <label for = "41mm">41mm</label>
+                            </dd>
+                            <dt>
+                                <label>Add-Ons:</label>
+                            </dt>
+                            <dd>
+                                <input type = "checkbox" id = "strap" name = "add-on">
+                                <label for = "strap">Extra Strap</label>
+
+                                <input type = "checkbox" id = "tool" name = "add-on">
+                                <label for = "tool">Adjustment Tools</label>
+
+                                <input type = "checkbox" id = "engrave" name = "add-on">
+                                <label for = "engrave">Engraving</label>
+                            </dd>
+
+                            <dt>
+                                <label for = "engraving">Custom Engraving: (if applicable)</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "engraving" name = "custom-engraving" pattern = "^[aA-zZ]+" placeholder = "ex. name">
+                            </dd>
+                        </dl>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Message</legend>
+                        <dl>
+                            <dt>
+                                <label for = "subject">Subject:</label>
+                            </dt>
+                            <dd>
+                                <input type = "text" id = "subject" name = "subject" pattern = "^[aA-zZ]+">
+                            </dd>
+
+                            <dt>
+                                <label for = "message">Message:</label>
+                            </dt>
+                            <dd>
+                                <textarea id = "message" name = "message" placeholder = "Anything you would like to tell us?"></textarea>
+                            </dd>
+                        </dl>
+                    </fieldset>
+
+                    <input type = "submit" value = Submit>
+                    <input type = "reset" value = Reset>
+
+                </form>
+            </section>
+        </main>
+
+        <br>
+        <hr>
+
+        <footer>
+            <p>&copy; 2025 rstimepieces</p>
+
+            <p id="back"><a href="#top">Back to the top</a></p>
+
+            <p>Designed by Haider Mehmood</p>
+        </footer>
+
+    </body>
+</html>

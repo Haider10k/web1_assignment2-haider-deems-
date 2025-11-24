@@ -1,0 +1,105 @@
+/* Styling for everything within the section id "section1" */
+#section1 {
+    background-image: url(../images/seikomod1.png); 
+    background-repeat: no-repeat; 
+    background-size: cover; /* makes the image fit */
+    background-color: rgba(0, 0, 0, 0.4); /* creates a black overlay on the image */
+    background-blend-mode: darken; /* blends the overlay with the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    height: 90vh; /* shows 90% of the image's height */
+}
+
+/* Styling for specifically the h1 within the section id "section1" */
+#section1 h1{
+    color: white;
+    font-size: 4.0em;
+    margin-bottom: 0.2em;
+}
+
+/* Styling for specifically the p within the section id "section1" */
+#section1 p{
+    color: rgb(230, 230, 230);
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+/* Styling for anything in the "heading" class */
+.heading {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+/* Styling for anything in the "info" class */
+.info {
+    margin-top: 0;
+}
+
+/* Styling for the element with the id "insta" */
+#insta {
+    color: White;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+/* Styling for the element with the id "insta" and when we hover above it */
+#insta:hover {
+    color: rgb(39, 190, 102);
+}
+
+
+/* -------      CHAT GPT PART (FOR HELP, NOT INTENDED FOR FINAL SUBMISSION ----------*/
+/* ---------- Hero responsiveness ---------- */
+
+/* Small screens: shorter hero, scaled-down text */
+@media (max-width: 589px) {
+    #section1 {
+        height: 60vh;
+        padding: 0 20px;
+    }
+
+    #section1 h1 {
+        font-size: 2.6em;
+    }
+
+    #section1 p {
+        font-size: 1.1em;
+        max-width: 22ch;
+    }
+}
+
+/* Medium screens: hero shorter but still prominent */
+@media (min-width: 590px) and (max-width: 789px) {
+    #section1 {
+        height: 60vh;
+    }
+
+    #section1 h1 {
+        font-size: 3.2em;
+    }
+
+    #section1 p {
+        font-size: 1.3em;
+        max-width: 26ch;
+    }
+}
+
+/* Large screens: full-height hero banner */
+@media (min-width: 790px) {
+    #section1 {
+        height: 90vh;
+    }
+}
+

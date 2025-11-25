@@ -15,10 +15,6 @@
         <header>
             <img class = "logo" src = "../images/logo.png" alt = "rstimepieces logo" width = "125" height = "80">
 
-            <!-- hamburger menu component-->
-            <input type = "checkbox" id = "nav-toggle" class = "nav-toggle">
-            <label for = "nav-toggle" class = "hamburger" aria-label = "Toggle navigation menu">
-
             <nav>
                 <ul>
                     <li class = "nav"><a href = "home.html">Home</a></li>
@@ -29,7 +25,8 @@
         </header>
 
         <main>
-            <section>
+            <section class = "content">
+                <div>
                 <h1>Contact Us</h1>
                 <p>
                     Have a question or want to start designing your own custom Seiko mod?
@@ -42,21 +39,36 @@
                     Prefer a more direct approach? Contact us anytime via email or on 
                     Instagram we'll respond within 24-48 hours.
                 </p>
+                </div>
+                <div>
+                <h1>Email</h1>
                 <p>
                     <!-- Image from https://www.pinterest.com/pin/mail-black-icon-191121577928943763/ -->
-                    <img src = "../images/email.png" alt = "Email logo" width = "70" height = "70">
+                    <img src = "../images/email.png" alt = "Email icon linking to rstimepieces_ email" width = "70" height = "70">
                     <a class = "link" href = "mailto:rstimepieces1@gmail.com" target = "_blank">
                     rstimepieces1@gmail.com
                     </a>
                 </p>
+                </div>
+                <div>
+                <h1>Instagram</h1>
                 <p>
                     <!-- Image from https://www.vectorstock.com/royalty-free-vector/
                     instagram-logo-white-circle-outline-icon-ig-app-vector-56237085 -->
-                    <img src = "../images/instagram.png" alt = "instagram logo" width = "60" height = "60"> 
+                    <img src = "../images/instagram.png" alt = "instagram logo linking to rstimepieces_ profile" width = "60" height = "60"> 
                     <a class = "link" href = "https://www.instagram.com/rstimepieces_/" target = "_blank">
                     rstimepieces_
                     </a>
                 </p>
+                </div>
+                <div>
+                <h1>Extra Section</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa rerum architecto, asperiores 
+                    aliquam commodi totam sunt inventore error culpa, incidunt facilis maxime doloremque exercitationem 
+                    molestiae animi, at iure est.
+                </p>
+                </div>
             </section>
 
             <section>
@@ -69,11 +81,11 @@
                                 <label>Salutation:</label>
                             </dt>
                             <dd>
-                                <input type = "radio" id = "mr" name = "salutation">
-                                <label for = "mr">Mr.</label>
+                                <input type = "radio" id = "Male" name = "salutation">
+                                <label for = "Male">Mr.</label>
 
-                                <input type = "radio" id = "ms" name = "salutation">
-                                <label for = "ms">Ms.</label>
+                                <input type = "radio" id = "Female" name = "salutation">
+                                <label for = "Female">Ms.</label>
 
                                 <input type = "radio" id = "other" name = "salutation">
                                 <label for = "other">Other</label>
@@ -213,7 +225,7 @@
                                 <input type = "radio" id = "39mm" name = "case-size">
                                 <label for = "39mm">39mm</label>
 
-                                <input type = radio id = "41mm" name = "case-size">
+                                <input type = "radio" id = "41mm" name = "case-size">
                                 <label for = "41mm">41mm</label>
                             </dd>
                             <dt>

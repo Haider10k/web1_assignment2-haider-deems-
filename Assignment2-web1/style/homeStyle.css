@@ -59,15 +59,13 @@
     color: rgb(39, 190, 102);
 }
 
-
-/* -------      CHAT GPT PART (FOR HELP, NOT INTENDED FOR FINAL SUBMISSION ----------*/
-/* ---------- Hero responsiveness ---------- */
-
-/* Small screens: shorter hero, scaled-down text */
+/* Small screens: shorter hero */
 @media (max-width: 589px) {
     #section1 {
         height: 60vh;
         padding: 0 20px;
+        background-position: center;
+        background-size: cover;
     }
 
     #section1 h1 {
@@ -76,23 +74,66 @@
 
     #section1 p {
         font-size: 1.1em;
-        max-width: 22ch;
     }
+
+    .heading {
+        font-size: 1.1em;
+        margin-top: 1em;
+    }
+
+    #insta {
+        font-size: 1.1em;
+        flex-direction: column;
+        gap: 5px;
+    }
+
 }
 
 /* Medium screens: hero shorter but still prominent */
 @media (min-width: 590px) and (max-width: 789px) {
     #section1 {
-        height: 60vh;
+        height: 75vh;
+        padding: 30px 20px;
+        background-position: center;
+        background-size: cover;
     }
 
-    #section1 h1 {
+    #section1 h1{
         font-size: 3.2em;
     }
 
-    #section1 p {
+    #section1 p{
         font-size: 1.3em;
-        max-width: 26ch;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content section{
+        padding: 25px;
+        text-align: center;
+        height: 350px;
+        overflow: auto;
+    }
+
+    #about {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #faq {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #follow {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #extra {
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 
@@ -100,6 +141,33 @@
 @media (min-width: 790px) {
     #section1 {
         height: 90vh;
+    }
+
+    .content section{
+        padding: 25px;
+        text-align: center;
+        height: 350px;
+        overflow: auto;
+    }
+
+    #about {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #faq {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    #follow {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #extra {
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 

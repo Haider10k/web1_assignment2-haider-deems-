@@ -86,3 +86,43 @@ Include a list of tasks that need to be completed
         - float an image to the right side of a paragraph of your choice 
         - consistent design for the header and footer of all pages (done)
         - all pages must use consistent font, margin, and padding (done)
+
+ASSIGNMENT 2 - PART 2 (accessibility fixes):
+- Manual search: 4/4
+    1- Improved alt text for our images (done)
+        - making our alt text more descriptive so users have a better understanding of what each image is
+            - ex. changing our img tag from 
+            <img src = "../images/instagram.png" alt = "instagram logo"> 
+            -->
+            <img src = "../images/instagram.png" alt = "instagram logo linking to rstimepieces_ profile">
+    2- Adding a missing table caption (done)
+        - Never had a table caption so we added one to ensure there is now a descripion of what our table showcases
+            - ex. added the following to our gallery.html file
+            <caption>
+                Comparison of our Four main custom Seiko Mod styles
+            </caption>
+    3- Improved form labels (done)
+        - ensured that all our labels were descriptive 
+            - ex. altered id and for elements in our contact.html file from 
+            <input type = "radio" id = "mr" name = "salutation">
+            <label for = "mr">Mr.</label>
+            -->
+            <input type = "radio" id = "Male" name = "salutation">
+            <label for = "Male">Mr.</label>
+    4- Increased touch point for smaller devices (done)
+        - made buttons and navigation links larger in order to make them easier to access on smaller devices
+            - ex. altered our submit and reset buttons on the contact form to be larger for devices under 590px
+            input[type="submit"], input[type="reset"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+            }
+    5- Add an item focus outline (done)
+        - makes it more accessible to see what item a user is interacting with
+            - ex. added the following to the globalStyle.css page to effect all pages
+            a:focus, button:focus, input:focus, textarea:focus {
+                outline: 3px solid rgb(39, 190, 102);
+                outline-offset: 2px;
+            }
+- Automated search: 

@@ -20,18 +20,6 @@ header {
     position: relative;
 }
 
-/* Styling to hide the nav toggle checkbox itself*/
-.nav-toggle {
-    display: none;
-}
-
-/* Styling for the hamburger menu icon (for small screens) */
-.hamburger {
-    font-size: 2rem;
-    cursor: pointer;
-    user-select: none;
-}
-
 /* Styling for the anchor within the nav semantic tag */
 nav a{
     color: white;
@@ -54,21 +42,12 @@ nav ul {
     right: 0;
     left: 0;
     background-color: black;
-    max-height: 0;
-    overflow: hidden; 
-    transition: max-height 0.3s ease-out;
 }
 
 /* Styling for the each list item within the nav semantic tag, adds a border to seperate each menu option*/
 nav li {
     padding: 15px 20px;
-    border-top: 1px solid rgb(40,40,40);
     text-align: center;
-}
-
-/* Styling to show the menu when hamburger checkbox is checked*/
-.nav-toggle:checked + .hamburger +nav ul {
-    max-height: 300px;
 }
 
 /* Styling for everything within a section to adjust to small screens */
@@ -128,53 +107,98 @@ main {
     margin-top: 1em;
 }
 
-/* Styling using media to make 2x2 grid for medium-sized screens */
-@media (min-width: 590px) and (max-width: 789px) {
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid rgb(39, 190, 102);
+    outline-offset: 2px;
+}
 
-    /* Style to hide hamburger icon to go back to original header and nav */
-    .hamburger {
-        display: none;
+@media (max-width: 589px) {
+    
+    header {
+        flex-direction: column;
+        gap:10px;
+        overflow: auto;
     }
 
-    header {
-        padding: 0 30px;
+    .logo {
+        padding-bottom: 1px;
     }
 
     nav ul {
-        position: static;
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 100px;
+    }
+
+    nav li {
+        padding: 20px;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+
+    footer {
+        font-size: 0.9em;
         display: flex;
-        max-height: none;
-        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Styling using media to make 2x2 grid for medium-sized screens */
+@media (min-width: 590px) and (max-width: 789px) {
+
+    header {
+        flex: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+    }
+
+    nav ul {
+        display: flex;
+        position: static;
+        background: none;
+        width: auto;
+        margin: 0;
     }
     
     nav li {
-        border-top: none;
         padding: 30px;
     }
 
-    /* Style to turn the content in the middle of the page into a 2x2 grid */
-    main {
+    nav a {
+        font-size: 1.2em;
+    }
+
+    .content {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
         gap: 20px;
-        padding: 0 30px;
-    }
-
-    /* Styling to make section1 in home to stretch across the full width */
-    #section1 {
-        grid-column: 1/-1;
-    }
-
-        section {
-        text-align: left;
         padding: 20px;
+        text-align: center;
+    }
+
+    .content section {
+        padding: 20px;
+    }
+
+    section {
+        text-align: center;
+        padding: 20px 80px;
         margin-bottom: 0;
-        background-color: rgb(20, 20, 20);
         border-radius: 8px;
     }
 
     section h1 {
         font-size: 2.4em;
+    }
+
+    section p {
+        font-size: 1.2em;
     }
 
     footer {
@@ -188,29 +212,10 @@ main {
 /* Styling to adjust page to large-sized screens */
 @media (min-width: 790px) {
 
-    /* Styling to the sides black */
-    body {
-        background-color: black;
-    }
-
-    /* Styling to center the main content at fixed width of 790px */
-    main {
-        max-width: 790px;
-        margin: 0 auto;
-        padding: 0 0 2em 0;
-        display: block;
-    }
-
     /* Styling to make the header span the full width */
     header {
-        max-width: 790px;
         margin: 0 auto;
         padding: 0 20px;
-    }
-
-    /* Styling to hide the hamburger menu and show the nav */
-    .hamburger {
-        display: none;
     }
 
     nav ul {
@@ -225,17 +230,29 @@ main {
         border-top: none;
     }
 
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        gap: 40px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .content section {
+        padding: 20px;
+    }
+
     /* Styling for within a section for a large-sized screen */
     section {
         text-align: center;
         padding: 0 80px;
-        margin-bottom: 2.5em;
         background-color: transparent;
-        border-radius: 0;
     }
 
     section h1 {
         font-size: 3.0em;
+        line-height: 1.7;
     }
 
     section p {
@@ -244,8 +261,6 @@ main {
 
     /* Styling to make the footer centered under 790px width */
     footer {
-        max-width: 790px;
-        margin: 2em auto;
         font-size: 1.2em;
         flex-direction: row;
         justify-content: space-between;

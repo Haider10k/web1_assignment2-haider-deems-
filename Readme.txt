@@ -1,6 +1,6 @@
 Include a list of tasks that need to be completed
 
-- Complete sketches: 2/3 completed
+- Complete sketches: 3/3 completed
     - Home page (done)
     - Gallery page (done)
     - Contact page (done)
@@ -125,8 +125,11 @@ ASSIGNMENT 2 - PART 2 (accessibility fixes):
                 outline: 3px solid rgb(39, 190, 102);
                 outline-offset: 2px;
             }
-- Automated search: 
+- Automated search: 1/1
     - scored a 10/10 so was nothing to add!!!
 
-- OUR GITHUB PAGES URL
+- OUR GITHUB PAGES URL:
     - https://haider10k.github.io/web1_assignment2-haider-deems-/
+
+- WORKLOAD SPLIT:
+    - all 3 pages were equally completed by both Haider and Deems, had completed this all in person together!

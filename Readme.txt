@@ -126,3 +126,7 @@ ASSIGNMENT 2 - PART 2 (accessibility fixes):
                 outline-offset: 2px;
             }
 - Automated search: 
+    - scored a 10/10 so was nothing to add!!!
+
+- OUR GITHUB PAGES URL
+    - https://haider10k.github.io/web1_assignment2-haider-deems-/
